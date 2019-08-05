@@ -1,0 +1,16 @@
+{
+  "source": "Unity",
+  "applications": [
+    {
+      "app_key": "application.generated.unity.test_eye.exe",
+      "launch_type": "url",
+      "url": "steam://launch/",
+      "action_manifest_path": "C:\\Users\\aman\\Documents\\GitHub\\Psychophysics\\SpeedDiscrimination\\test_eye\\actions.json",
+      "strings": {
+        "en_us": {
+          "name": "test_eye [Testing]"
+        }
+      }
+    }
+  ]
+}

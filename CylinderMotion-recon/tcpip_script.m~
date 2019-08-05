@@ -1,0 +1,9 @@
+%% TCPIP comm between Unity/Matlab. Open Unity first(?) 
+
+t = tcpip('127.0.0.1',10061,'NetworkRole','Client');
+fopen(t)
+
+%%
+data = 'b,2,s';
+fwrite(t,data)
+t

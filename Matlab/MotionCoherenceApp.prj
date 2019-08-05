@@ -1,0 +1,73 @@
+<deployment-project plugin="plugin.apptool" plugin-version="1.0">
+  <configuration build-checksum="690783744" file="C:\Users\aman\Documents\GitHub\Psychophysics\Matlab\MotionCoherenceApp.prj" location="C:\Users\aman\Documents\GitHub\Psychophysics\Matlab" name="MotionCoherenceApp" target="target.mlapps" target-name="Package App">
+    <param.appname>MotionCoherenceApp</param.appname>
+    <param.authnamewatermark>Edward Horrocks</param.authnamewatermark>
+    <param.email />
+    <param.company />
+    <param.icon />
+    <param.icons />
+    <param.summary />
+    <param.description />
+    <param.screenshot>C:\Users\aman\AppData\Local\Temp\tp5f1ecf69_2c5a_4bb1_ba3d_54275e0932c5.png</param.screenshot>
+    <param.version>1.0</param.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
+    <param.platforms />
+    <param.output>C:\Users\aman\Documents\GitHub\Psychophysics\Matlab</param.output>
+    <param.guid>e837ff24-1751-4d26-8397-8e0cbc7ff6a1</param.guid>
+    <unset>
+      <param.email />
+      <param.company />
+      <param.icon />
+      <param.icons />
+      <param.summary />
+      <param.description />
+      <param.version />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
+      <param.platforms />
+      <param.output />
+    </unset>
+    <fileset.main>
+      <file>${PROJECT_ROOT}\coherence_app_newSampling.mlapp</file>
+    </fileset.main>
+    <fileset.depfun>
+      <file>C:\toolbox\Psychtoolbox\PsychInitialize\PsychStartup.m</file>
+      <file>C:\toolbox\Psychtoolbox\PsychInitialize\startup.m</file>
+      <file>C:\toolbox\Psychtoolbox\PsychOneliners\Is64Bit.m</file>
+      <file>C:\toolbox\Psychtoolbox\PsychOneliners\IsLinux.m</file>
+      <file>C:\toolbox\Psychtoolbox\PsychOneliners\IsOctave.m</file>
+      <file>C:\toolbox\Psychtoolbox\PsychOneliners\IsOSX.m</file>
+      <file>C:\toolbox\Psychtoolbox\PsychOneliners\IsWin.m</file>
+      <file>C:\toolbox\Psychtoolbox\PsychOneliners\PsychtoolboxRoot.m</file>
+      <file>C:\toolbox\Psychtoolbox\PsychOneliners\streq.m</file>
+    </fileset.depfun>
+    <fileset.resources />
+    <fileset.package />
+    <build-deliverables>
+      <file location="C:\Users\aman\Documents\GitHub\Psychophysics" name="Matlab" optional="false">C:\Users\aman\Documents\GitHub\Psychophysics\Matlab</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2018a</root>
+      <toolboxes />
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>
