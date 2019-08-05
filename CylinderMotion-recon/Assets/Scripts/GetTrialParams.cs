@@ -222,16 +222,16 @@ public class GetTrialParams : MonoBehaviour
         bool done = false;
         while (!done) 
         {
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-            //if (Input.GetMouseButtonDown(0))
+            //if (Input.GetKeyDown(KeyCode.DownArrow))
+            if (Input.GetMouseButtonDown(0))
             {
                 logScript._sw3.WriteLine("trial {0} t {1} e {2} ",
                     trialNum, Time.time, "resp");
                 lastKey = 'f';
                 
             }
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            //if (Input.GetMouseButtonDown(1))
+            //if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetMouseButtonDown(1))
             {
                 logScript._sw3.WriteLine("trial {0} t {1} e {2} ",
                     trialNum, Time.time, "resp");
@@ -239,7 +239,8 @@ public class GetTrialParams : MonoBehaviour
             }
 
 
-            if (Input.GetKeyDown(KeyCode.M))
+            //if (Input.GetKeyDown(KeyCode.M))
+            if (Input.GetMouseButtonDown(2))
             {
                 logScript._sw3.WriteLine("trial {0} t {1} e {2} ",
                     trialNum, Time.time, "resp");

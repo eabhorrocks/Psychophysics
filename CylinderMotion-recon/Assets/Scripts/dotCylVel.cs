@@ -41,7 +41,7 @@ public class dotCylVel : MonoBehaviour
         transform.RotateAround(axisVec, Vector3.forward, Vel[0] * Time.deltaTime);
         if (zPos < 0)
         {
-            mytransform = new Vector3 (transform.position[0], transform.position[1], transform.position[2] + 200);
+           mytransform = new Vector3 (transform.position[0], transform.position[1], transform.position[2] + 200);
             transform.position = mytransform;
         }
         else if (zPos > 200)
@@ -54,6 +54,9 @@ public class dotCylVel : MonoBehaviour
     void Teleport()
     {
         telNum++;
-        transform.position = poses[telNum];
+        //transform.position = poses[telNum];
+        Vector2 circRand = Random.insideUnitCircle.normalized * 50; //random x-y pos on circle
+        float zPos = Random.Range(0, 200); // random z pos
+        transform.position = new Vector3(circRand[0], circRand[1], zPos);
     }
 }

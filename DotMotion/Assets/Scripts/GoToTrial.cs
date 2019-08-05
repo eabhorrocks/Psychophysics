@@ -8,7 +8,7 @@ using ViveSR.anipal.Eye;
 public class GoToTrial : MonoBehaviour
 {
     GetTrialParams paramsRef;
-    SpeedTracker spdTracker;
+    SpeedTracker_new spdTracker;
     LoggingScript logScript;
     public GameObject dotscoh;
     public GameObject dotsinc;
@@ -42,7 +42,7 @@ public class GoToTrial : MonoBehaviour
     void Awake()
     {
         paramsRef = FindObjectOfType<GetTrialParams>();
-        spdTracker = FindObjectOfType<SpeedTracker>();
+        spdTracker = FindObjectOfType<SpeedTracker_new>();
         logScript = FindObjectOfType<LoggingScript>();
     }
 

@@ -66,6 +66,7 @@ public class RandomSpawnCylinder : MonoBehaviour
         numDots = (int)paramsRef.numDots;
         vel = paramsRef.velocity.z;
         angleVec = vonMises.Generate(numDots);
+        dotLifetime = paramsRef.dotLifetime;
 
         string astring = String.Join(",", angleVec.Select(p => p.ToString()).ToArray());
 

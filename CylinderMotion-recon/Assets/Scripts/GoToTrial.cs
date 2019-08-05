@@ -8,7 +8,7 @@ using ViveSR.anipal.Eye;
 public class GoToTrial : MonoBehaviour
 {
     GetTrialParams paramsRef;
-    SpeedTracker spdTracker;
+    SpeedTracker_cyl spdTracker;
     LoggingScript logScript;
     public GameObject dotscoh;
     public GameObject dotsinc;
@@ -42,7 +42,7 @@ public class GoToTrial : MonoBehaviour
     void Awake()
     {
         paramsRef = FindObjectOfType<GetTrialParams>();
-        spdTracker = FindObjectOfType<SpeedTracker>();
+        spdTracker = FindObjectOfType<SpeedTracker_cyl>();
         logScript = FindObjectOfType<LoggingScript>();
     }
 
@@ -119,7 +119,8 @@ public class GoToTrial : MonoBehaviour
                     pausing = true;
                 }
 
-                if (Input.GetKeyDown(KeyCode.P))
+                //if (Input.GetKeyDown(KeyCode.P))
+                if (Input.GetMouseButtonDown(2)) ;
                     {
                         pausing = false;
                         pauseText.SetActive(false);
@@ -140,7 +141,8 @@ public class GoToTrial : MonoBehaviour
         if (paramsRef.trialNum % 4 == 1)
         {
             endBlockText.SetActive(true);
-            yield return new WaitUntil(() => (Input.GetKeyDown(KeyCode.RightControl)));
+            //yield return new WaitUntil(() => (Input.GetKeyDown(KeyCode.RightControl)));
+            yield return new WaitUntil(() => (Input.GetMouseButtonDown(2)));
             endBlockText.SetActive(false);
         }
 
@@ -153,11 +155,11 @@ public class GoToTrial : MonoBehaviour
           //  {
             //yield return new WaitUntil(() => (Input.GetMouseButtonDown(2)));
             //    yield return new WaitUntil(() => (Input.GetKeyDown(KeyCode.RightControl)));
-            //    stillText.SetActive(true);
-            //    yield return new WaitForSeconds((float)0.3);
+                stillText.SetActive(true);
+                yield return new WaitForSeconds((float)0.3);
            // }
-            //yield return new WaitUntil(() => spdTracker.hmdvellistsq.Max() < spdTracker.stillthreshold);
-           // stillText.SetActive(false);
+            yield return new WaitUntil(() => spdTracker.hmdvellistsq.Max() < spdTracker.stillthreshold);
+            stillText.SetActive(false);
             yield return new WaitForSeconds((float)0.15);
             
             SceneManager.LoadScene("Stimulus_cyl");
@@ -172,10 +174,10 @@ public class GoToTrial : MonoBehaviour
          //   {
                 //yield return new WaitUntil(() => (Input.GetMouseButtonDown(2)));
             //    yield return new WaitUntil(() => (Input.GetKeyDown(KeyCode.RightControl)));
-        //        walkText.SetActive(true);
+                walkText.SetActive(true);
           //  }
-         //   yield return new WaitUntil(() => spdTracker.hmdvellistsq.Min() > spdTracker.walkthreshold);
-         //   walkText.SetActive(false);
+            yield return new WaitUntil(() => spdTracker.hmdvellistsq.Min() > spdTracker.walkthreshold);
+            walkText.SetActive(false);
             yield return new WaitForSeconds((float)0.15);
             
             SceneManager.LoadScene("Stimulus_cyl");
@@ -185,7 +187,7 @@ public class GoToTrial : MonoBehaviour
         //paramsRef.trialNum++;
         //SceneManager.LoadScene("Stimulus_VonMises");
     }
-
+    
     IEnumerator Pausing()
     {
         //Debug.Log("pausing");
@@ -193,7 +195,8 @@ public class GoToTrial : MonoBehaviour
         bool done = false;
         while (!done)
         {
-            if (Input.GetKeyDown(KeyCode.RightControl))
+            //if (Input.GetKeyDown(KeyCode.RightControl))
+            if (Input.GetMouseButtonDown(2))
             {
                 pauseText.SetActive(false);
                 done = true;
