@@ -55,7 +55,7 @@ public class dotCylVel : MonoBehaviour
     {
         telNum++;
         //transform.position = poses[telNum];
-        Vector2 circRand = Random.insideUnitCircle.normalized * 50; //random x-y pos on circle
+        Vector2 circRand = Random.insideUnitCircle.normalized * 35; //random x-y pos on circle
         float zPos = Random.Range(0, 200); // random z pos
         transform.position = new Vector3(circRand[0], circRand[1], zPos);
     }

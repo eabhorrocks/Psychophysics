@@ -302,7 +302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectToSpawn: {fileID: 1780296812631585215, guid: 4cbf41f471c3cd541b6b74b89632ff64,
     type: 3}
-  radius: 50
+  radius: 35
   zPosMin: 0
   zPosMax: 200
   numDots: 200

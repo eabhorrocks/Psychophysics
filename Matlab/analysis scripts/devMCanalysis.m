@@ -20,7 +20,7 @@ fileName = resultsFile;
 
 
 %%
-test = results.allTrials(:,1:240);
+test = results.allTrials;
 invalidTrials = find(test(6,:)==9);
 test(:,invalidTrials) = [];
 correct = (test(5,:)>0 & test(6,:)==0) | (test(5,:)<0 & test(6,:)==1);
@@ -128,23 +128,23 @@ end
 
 %% plot comparison of stationary vs walking
 
-% for ivel = 1:3
-%     subplot(2,3,ivel)
-%     result_stat = a.cond(ivel,1).psigresult;
-%     result_walk = a.cond(ivel,2).psigresult;
-%     plotPsychParent_statvswalk(result_stat, result_walk, ivel, fileName)
-% end
+for ivel = 1:3
+    subplot(2,3,ivel)
+    result_stat = a.cond(ivel,1).psigresult;
+    result_walk = a.cond(ivel,2).psigresult;
+    plotPsychParent_statvswalk(result_stat, result_walk, ivel, fileName)
+end
 
 
 %% plot comparison of speeds for walking and stationary separately
-% 
-% for istate = 1:2
-%     result_spd1 = a.cond(1,istate).psigresult;
-%     result_spd2 = a.cond(2,istate).psigresult;
-%     result_spd3 = a.cond(3,istate).psigresult;
-%     subplot(2,3,3+istate)
-%     plotPsychParent_speedcomp(result_spd1, result_spd2, result_spd3, istate, fileName)
-% end
+
+for istate = 1:2
+    result_spd1 = a.cond(1,istate).psigresult;
+    result_spd2 = a.cond(2,istate).psigresult;
+    result_spd3 = a.cond(3,istate).psigresult;
+    subplot(2,3,3+istate)
+    plotPsychParent_speedcomp(result_spd1, result_spd2, result_spd3, istate, fileName)
+end
 %% get bias values
 
 for ivel = 1:size(results.cond,1)
